@@ -3,12 +3,16 @@ import mysql.connector
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return "<h1>¡Bienvenido a ProHospital!</h1>"
+
 # Configuración de la conexión [cite: 119, 123]
 conn = mysql.connector.connect(
     host='localhost',
     user='root',
     password='',
-    database='ujcv_2026_1_progra2' 
+    database='ProHospital' 
 )
 
 # --- CRUD ESPECIALIDADES ---
@@ -29,7 +33,6 @@ def agregar_especialidad():
         conn.commit()
         return redirect(url_for('especialidades_index'))
     return render_template('especialidades/agregar.html')
-
 
 # --- CRUD DOCTORES ---
 @app.route("/doctores/")
@@ -89,7 +92,7 @@ def eliminar_doctor(codigo):
         cursor.execute("DELETE FROM doctores WHERE DocCodigo = %s", (codigo,))
         conn.commit()
         return redirect(url_for('doctores_index'))
-    
+        
 # --- CRUD PACIENTES ---
 @app.route("/pacientes/")
 def pacientes_index():
