@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Doctor</title>
+</head>
+<body>
+    <h3 style="color: red;">¿Estás seguro de eliminar este doctor?</h3>
+    <form action="" method="POST">
+        <label>Nombre:</label>
+        <input type="text" value="{{doctor.1}}" disabled>
+        
+        <label>Especialidad:</label>
+        <input type="text" value="{{doctor.2}}" disabled>
+        
+        <input type="submit" value="Confirmar Eliminación">
+        <a href="/doctores/">Cancelar y Volver</a>
+    </form>
+</body>
+</html>

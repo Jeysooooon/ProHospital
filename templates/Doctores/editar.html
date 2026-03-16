@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Doctor</title>
+</head>
+<body>
+    <h3>Modificar Información del Doctor</h3>
+    <form action="" method="POST">
+        <label>Nombre:</label>
+        <input type="text" name="DocNombre" required maxlength="100" value="{{doctor.1}}">
+        
+        <label>Código Especialidad:</label>
+        <input type="number" name="DocEspecialidad" required value="{{doctor.2}}">
+        
+        <input type="submit" value="Guardar Cambios">
+        <a href="/doctores/">Volver</a>
+    </form>
+</body>
+</html>

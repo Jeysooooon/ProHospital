@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Listado de Doctores</title>
+</head>
+<body>
+    <h3>Listado de Doctores</h3>
+    <a href="/doctores/agregar">Nuevo Doctor</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Acciones</th>
+                <th>Código</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for doctor in lista %}
+            <tr>
+                <td>
+                    <a href="/doctores/editar/{{doctor.0}}">Editar</a>
+                    <a href="/doctores/eliminar/{{doctor.0}}">Eliminar</a>
+                </td>
+                <td>{{doctor.0}}</td>
+                <td>{{doctor.1}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
