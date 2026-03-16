@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Especialidad</title>
+</head>
+<body>
+    <h3 style="color: red;">¿Estás seguro de eliminar esta especialidad?</h3>
+    <form action="" method="POST">
+        <label>Nombre de la Especialidad:</label>
+        <input type="text" value="{{ especialidad.1 }}" disabled>
+        
+        <input type="submit" value="Confirmar Eliminación">
+        <a href="/especialidades/">Cancelar y Volver</a>
+    </form>
+</body>
+</html>
