@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/pacientes/editar/{{prod.0}}">
+        <label>id_Pacientes</label>
+        <input type="text" name="id_Pacientes" value="{{prod.1}}">
+        <label>Nombre</label>
+        <input type="text" name="Nombre" value="{{prod.2}}">
+        <label>Apellido</label>
+        <input type="text" name="Apellido" value="{{prod.3}}">
+        <label>Fecha_Nacimiento</label>
+        <input type="text" name="Fecha_Nacimiento" value="{{prod.4}}">
+        <label>Genero</label>
+        <input type="text" name="Genero" value="{{prod.5}}">
+        <label>Telefono</label>
+        <input type="text" name="Telefono" value="{{prod.6}}">
+        <label>Direccion</label>
+        <input type="text" name="Direccion" value="{{prod.7}}">
+        <input type="submit" value="Editar">
+    </form>  
+</body>
+</html>
